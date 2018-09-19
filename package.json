@@ -1,0 +1,26 @@
+{
+    "name": "http-api-assignment",
+    "version": "1.0.0",
+    "description": "HTTP API assignment HW",
+    "main": "./src/server.js",
+    "scripts": {
+        "start": "node ./src/server.js",
+        "pretest": "eslint ./src --fix",
+        "test": "echo \"Tests Complete!\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/eap9238/http-api-assignment.git"
+    },
+    "author": "Eleanor Post [eap9238@g.rit.edu]",
+    "license": "ISC",
+    "devDependencies": {
+        "eslint": "^4.5.0",
+        "eslint-config-airbnb": "^15.1.0",
+        "eslint-plugin-import": "^2.7.0"
+    },
+    "bugs": {
+        "url": "https://github.com/eap9238/http-api-assignment/issues"
+    },
+    "homepage": "https://github.com/eap9238/http-api-assignment#readme"
+}
