@@ -35,6 +35,7 @@
 
             const sendAjax = (url, acceptedType) => {
                 const xhr = new XMLHttpRequest();
+                
                 xhr.open('GET', url);
                 xhr.setRequestHeader ("Accept", acceptedType);
                 xhr.onload = () => handleResponse(xhr);
@@ -47,14 +48,15 @@
                 const typeSelect = document.querySelector("#type");
                 const sendButton = document.querySelector("#send");
 
-                let page = '/success';
-                let type = 'application/json';
-                const send = () => sendAjax(page, type);
-                const pageChange = (e) => page = e.target.value;
-                const typeChange = (e) => type = e.target.value;
+                let pageVal = '/success';
+                let typeVal = 'application/json';
+                
+                const page = (e) => pageVal = e.target.value;
+                const type = (e) => typeVal = e.target.value;
+                const send = () => sendAjax(pageVal, typeVal);
 
-                pageSelect.addEventListener('change', pageChange);
-                typeSelect.addEventListener('change', typeChange);
+                pageSelect.addEventListener('change', page);
+                typeSelect.addEventListener('change', type);
                 sendButton.addEventListener('click', send);
             };
 
